@@ -1,27 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 17:10:58 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/05 15:35:43 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/04 17:11:07 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/05 16:23:37 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_is_negative(int n)
+void	ft_print_comb2(void)
 {
-	if (n < 0)
-		putchar('N');
-	else
-		putchar('P');
+	int	first;
+	int	second;
+
+	first = 0;
+	second = 0;
+	while (first <= 99)
+	{
+		second = first + 1;
+		while (second <= 99)
+		{
+			ft_putchar(first / 10 + '0');
+			ft_putchar(first % 10 + '0');
+			ft_putchar(' ');
+			ft_putchar(second / 10 + '0');
+			ft_putchar(second % 10 + '0');
+
+			if ((first / 10 != 9) || (first % 10 != 8))
+			{
+				ft_putChar(',');
+				ft_putChar(' ');
+			}
+			second++;
+		}
+		first++;
+	}
 }
+

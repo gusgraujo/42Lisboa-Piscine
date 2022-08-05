@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 17:10:58 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/05 15:35:43 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/05 13:16:22 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/05 14:54:59 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
+
+void ft_putchar(char c){
+    write(1,&c,1);
+
 }
 
-void	ft_is_negative(int n)
-{
-	if (n < 0)
-		putchar('N');
-	else
-		putchar('P');
+
+void ft_print_combn(int n){
+
+    while ()
+    {
+        
+    }
+    
+    
 }
