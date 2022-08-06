@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush04.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:51:42 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/06 20:33:29 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/06 21:49:38 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,17 @@ void	ft_print_lines(int x, int y)
 	{	
 		if (line == 1)
 		{	
-			ft_print_colums(x, 'A', 'B', 'C');
+			ft_print_colums(x, '/', '*', 92);
 			line++;
 		}
 		else if (line == y)
 		{
-			ft_print_colums(x, 'C', 'B', 'A');
+			ft_print_colums(x, 92, '*', '/');
 			line++;	
 		}
 		else if (line != 1 && line != y)
 		{
-			ft_print_colums(x, 'B', ' ', 'B');
+			ft_print_colums(x, '*', ' ', '*');
 			line++;
 		}
 	}

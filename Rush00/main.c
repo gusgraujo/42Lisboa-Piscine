@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:50:05 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/06 20:26:11 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/06 20:36:29 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	rush(int x, int y);
 
 int	main(void)
 {
-	rush(4, 4);
+	rush(4,4);
 	return (0);
 }
