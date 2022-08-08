@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -20,8 +19,8 @@ void	ft_putchar(char c)
 
 void	ft_is_negative(int n)
 {
-	if (n < 0)
-		putchar('N');
+	if (n >= 0 || n == NULL)
+		ft_putchar('P');
 	else
-		putchar('P');
+		ft_putchar('N');
 }
