@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/08 01:02:05 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/08 01:02:48 by gugoncal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_print_alphabet(void)
@@ -10,8 +22,4 @@ void	ft_print_alphabet(void)
 		write(1, &alphabetic, 1);
 		alphabetic++;
 	}
-}
-
-int	main(){
-	ft_print_alphabet();
 }
