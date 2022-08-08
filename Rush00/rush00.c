@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 14:51:42 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/06 20:33:23 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/07 15:12:24 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_print_lines(int x, int y)
 		else if (line == y)
 		{
 			ft_print_colums(x, 'o', '-', 'o');
-			line++;	
+			line++;
 		}
 		else if (line != 1 && line != y)
 		{
