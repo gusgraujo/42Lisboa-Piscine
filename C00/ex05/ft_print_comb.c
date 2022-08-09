@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 17:11:03 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 08:41:39 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/09 10:41:18 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_validate(char first, char second, char third)
+void	ft_print_number(char first, char second, char third)
 {
 	char	comma;
 	char	space;
 
 	comma = ',';
 	space = ' ';
-	putchar(first);
-	putchar(second);
-	putchar(third);
+	ft_putchar(first);
+	ft_putchar(second);
+	ft_putchar(third);
 	if (first != '7' || second != '8' || third != '9')
 	{
-		putchar(comma);
-		putchar(space);
+		ft_putchar(comma);
+		ft_putchar(space);
 	}
 }
 
@@ -49,7 +49,7 @@ void	ft_print_comb(void)
 			third = second + 1;
 			while (third <= '9')
 			{
-				ft_validate(first, second, third);
+				ft_print_number(first, second, third);
 				third++;
 			}
 			second++;

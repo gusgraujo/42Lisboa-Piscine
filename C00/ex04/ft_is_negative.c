@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 17:10:58 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 08:39:34 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/09 09:52:39 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ft_is_negative(int n)
 {
 	if (n < 0)
 	{
-		ft_putchar('P');
+		ft_putchar('N');
 	}
 	else
 	{
-		ft_putchar('N');
+		ft_putchar('P');
 	}
 }
