@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 17:11:07 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/05 23:08:10 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/09 08:47:50 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	ft_print_comb2(void)
 			ft_putchar(second % 10 + '0');
 			if ((first / 10 != 9) || (first % 10 != 8))
 			{
-				ft_putChar(',');
-				ft_putChar(' ');
+				ft_putchar(',');
+				ft_putchar(' ');
 			}
 			second++;
 		}
