@@ -6,9 +6,11 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 14:56:12 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 20:34:58 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/09 22:07:02 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c)
 {
