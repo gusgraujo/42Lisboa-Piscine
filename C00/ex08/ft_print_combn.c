@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 13:16:22 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 09:55:13 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/09 10:59:22 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,4 @@ void	ft_print_combn(int n)
 		}
 		ft_putvet(comb, n);
 	}
-}
-
-
-int main ()
-{
-	ft_print_combn(5);
 }

@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 17:11:12 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 14:46:31 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/09 16:13:24 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/09 20:35:05 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int	first;
+	int	last;
+	int	count;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	count = 0;
+	while (count < size / 2)
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(nb * -1);
-	}
-	else
-	{
-		if (nb > 9)
-		{
-			ft_putnbr(nb / 10);
-		}
-		ft_putchar(48 + nb % 10);
+		first = *(tab + count);
+		last = *(tab + size - 1 - count);
+		*(tab + count) = last;
+		*(tab + size - 1 - count) = first;
+		count++;
 	}
 }

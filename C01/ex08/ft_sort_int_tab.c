@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 17:11:12 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/09 14:46:31 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/09 17:37:28 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/09 20:35:10 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	j;
+	int	temp;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 0;
+	while (i < size)
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(nb * -1);
-	}
-	else
-	{
-		if (nb > 9)
+		j = i + 1;
+		while (j < size)
 		{
-			ft_putnbr(nb / 10);
+			if (*(tab + j) < *(tab + i))
+			{
+				temp = *(tab + i);
+				*(tab + i) = *(tab + j);
+				*(tab + j) = temp;
+			}
+			j++;
 		}
-		ft_putchar(48 + nb % 10);
+		i++;
 	}
 }
