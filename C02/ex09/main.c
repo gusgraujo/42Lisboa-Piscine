@@ -24,7 +24,7 @@ void	ft_putstr(char *str)
 
 int main()
 {
-	char str_src[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	char str_src[] = "salut comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 	char str_dest[]	= "Salut";
 	//int num;
 	//num = ft_str_is_lowercase(str_src);

@@ -25,7 +25,7 @@ void	ft_putstr(char *str)
 int main()
 {
 	char str_src[] = "salut,";
-	char str_dest[]	= "Salut";
+	char str_dest[]	= "salut";
 	unsigned int num;
 	num = ft_strlcpy(str_dest,str_src,6);
 
