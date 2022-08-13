@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 
-char	*ft_strupcase(char*str);
+char	*ft_strlowcase(char*str);
 
 void	ft_putchar(char c)
 {
@@ -24,11 +24,11 @@ void	ft_putstr(char *str)
 
 int main()
 {
-	char str_src[] = "AUBAY";
+	char str_src[] = "AUBAY58/*";
 	char str_dest[]	= "Salut";
 	//int num;
 	//num = ft_str_is_lowercase(str_src);
-	ft_strupcase(str_src);
+	ft_strlowcase(str_src);
 	printf("\n");
 	//printf("%d",num);
 	ft_putstr(str_src);

@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 
-int	ft_str_is_lowercase(char *str);
+int	ft_str_is_uppercase(char *str);
 
 void	ft_putchar(char c)
 {
@@ -28,9 +28,9 @@ int main()
 	char str_dest[]	= "aalut";
 	int i;
 
-	i = ft_str_is_lowercase(str_dest);
+	i = ft_str_is_uppercase(str_dest);
 	printf("%d \n", i);
-	i = ft_str_is_lowercase(str_src);
+	i = ft_str_is_uppercase(str_src);
 	printf("%d \n", i);
 
 	return (0);

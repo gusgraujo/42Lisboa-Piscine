@@ -6,24 +6,32 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:18:44 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/11 19:05:23 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/13 13:30:58 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcapitalize(char *str)
 {
+	int	count;
 	int	i;
 
+	count = 0;
 	i = 0;
-	while (str[i] != '\0')
-	{	
-		if ((i == 0) || str[i - 1] == ' '
-			|| str[i - 1] == '-' || str[i - 1] == '+')
+	while (str[count] != '\0')
+	{
+		if (i == 0 && (str[count] >= 'a' && str[count] <= 'z'))
 		{
-			if ((str[i] >= 'a') && (str[i] <= 'z'))
-				str[i] = str[i] - 32;
+			str[count] -= 32;
+			i++;
 		}
-		i++;
+		else if (i > 0 && (str[count] >= 'A' && str[count] <= 'Z'))
+			str[count] += 32;
+		else if ((str[count] < '0') || (str[count] > '9' && str[count] < 'A')
+			|| (str[count] > 'Z' && str[count] < 'a') || (str[count] > 'z'))
+			i = 0;
+		else
+			i++;
+		count++;
 	}
 	return (str);
 }

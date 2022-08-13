@@ -6,11 +6,11 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:14:27 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/11 17:16:08 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/13 13:25:56 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char*str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 

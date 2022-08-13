@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-
-int	ft_str_is_lowercase(char *str);
+int	ft_str_is_printable(char *str);
 
 void	ft_putchar(char c)
 {
@@ -25,12 +24,12 @@ void	ft_putstr(char *str)
 int main()
 {
 	char str_src[]	= "ASDFADSF";
-	char str_dest[]	= "aalut";
+	char str_dest[]	= "aalut  \n";
 	int i;
 
-	i = ft_str_is_lowercase(str_dest);
+	i = 	ft_str_is_printable(str_src);
 	printf("%d \n", i);
-	i = ft_str_is_lowercase(str_src);
+	i = 	ft_str_is_printable(str_dest);
 	printf("%d \n", i);
 
 	return (0);

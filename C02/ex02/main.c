@@ -24,7 +24,7 @@ void	ft_putstr(char *str)
 
 int main()
 {
-	char str_src[] = "HEUEEUEU";
+	char str_src[] = "HEU56456";
 	char str_dest[]	= "Salut";
 	int num;
 	num = ft_str_is_alpha(str_src);
