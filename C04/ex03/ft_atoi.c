@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/13 17:21:24 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/15 14:56:36 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/15 18:50:34 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/15 19:49:31 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_atoi(char *str)
 {
-	unsigned int	i;
-	int				value;
+	int	i;
+	int	sign;
 
 	i = 0;
-	value = 0;
-	while ((i < n) && !value && (s1[i] != '\0') && (s2[i] != '\0'))
-	{	
-		value = ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+	while (str[i] != '\0')
+	{
+
 	}
-	if (i < n && !value && (s1[i] == '\0' || s2[i] == '\0'))
-		value = (unsigned char)s1[i] - (unsigned char)s2[i];
-	return (value);
 }

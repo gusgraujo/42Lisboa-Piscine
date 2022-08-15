@@ -6,7 +6,7 @@ int		main(void)
 {
 	char dest[20] = "123";
 	char src[] = "4567890";
-	unsigned int nb = 8;
+	unsigned int nb = 2;
 
 	printf("-----\ndest = %s\nsrc = %s\nnb = %d\n", dest, src, nb);
 	ft_strncat(dest, src, nb);

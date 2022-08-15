@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/13 17:21:24 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/15 14:56:36 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/14 19:15:52 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/15 17:37:34 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	unsigned int	i;
-	int				value;
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
 
 	i = 0;
-	value = 0;
-	while ((i < n) && !value && (s1[i] != '\0') && (s2[i] != '\0'))
-	{	
-		value = ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
 		i++;
 	}
-	if (i < n && !value && (s1[i] == '\0' || s2[i] == '\0'))
-		value = (unsigned char)s1[i] - (unsigned char)s2[i];
-	return (value);
 }

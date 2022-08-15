@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 21:15:58 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/13 21:27:24 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/15 15:02:43 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,15 @@ int	ft_strlen(char*str)
 
 char	*ft_strcat(char *dest, char*src)
 {
-	char	*str;
-	int		size_dest;
-	int		i;
+	int	size_dest;
 
-	i = 0;
 	size_dest = ft_strlen(dest);
-	while (src[i] != '\0')
+	while (*src != '\0')
 	{
-		dest[i + size_dest] = src[i];
-		i++;
+		dest[size_dest] = *src;
+		size_dest++;
+		src++;
 	}
-	dest[i + size_dest] = '\0';
+	dest[size_dest] = '\0';
 	return (dest);
 }

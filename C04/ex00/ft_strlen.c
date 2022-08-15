@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/13 17:21:24 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/15 14:56:36 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/14 17:01:59 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/14 17:03:20 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
-	int				value;
+	int	count;
 
-	i = 0;
-	value = 0;
-	while ((i < n) && !value && (s1[i] != '\0') && (s2[i] != '\0'))
-	{	
-		value = ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+	count = 0;
+	while (str[count] != '\0')
+	{
+		count++;
 	}
-	if (i < n && !value && (s1[i] == '\0' || s2[i] == '\0'))
-		value = (unsigned char)s1[i] - (unsigned char)s2[i];
-	return (value);
+	return (count);
 }

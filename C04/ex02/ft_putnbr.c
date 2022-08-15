@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/13 17:21:24 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/15 14:56:36 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/15 17:40:38 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/15 17:41:38 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
-	int				value;
+#include <unistd.h>
 
-	i = 0;
-	value = 0;
-	while ((i < n) && !value && (s1[i] != '\0') && (s2[i] != '\0'))
-	{	
-		value = ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
+	{
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
 	}
-	if (i < n && !value && (s1[i] == '\0' || s2[i] == '\0'))
-		value = (unsigned char)s1[i] - (unsigned char)s2[i];
-	return (value);
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(nb * -1);
+	}
+	else
+	{
+		if (nb > 9)
+		{
+			ft_putnbr(nb / 10);
+		}
+		ft_putchar(48 + nb % 10);
+	}
 }
