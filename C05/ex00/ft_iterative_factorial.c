@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 18:50:34 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/16 20:55:01 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/17 22:46:54 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/17 23:10:34 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
-{
+int	ft_iterative_factorial(int nb)
+{	
 	int	i;
-	int	sign;
-	int	number;
+	int	res;
 
 	i = 0;
-	number = 0;
-	sign = 1;
-	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
-		i++;
-	while (str[i] == '+' || str[i] == '-')
+	res = 1;
+	if (nb == 0 || nb <= 0)
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		return (0);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nb > 0)
 	{
-		number = (str[i] - '0') + (number * 10);
-		i++;
+		res *= nb;
+		nb--;
 	}
-	return (sign * number);
+	return (res);
 }
