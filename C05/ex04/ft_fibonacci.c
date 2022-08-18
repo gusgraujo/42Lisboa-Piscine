@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 20:52:56 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/18 21:37:54 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/18 22:59:57 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/18 23:10:11 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
+int	ft_fibonacci(int index)
+{	
 	int	value;
 
-	value = nb;
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	while (power > 1)
+	if (index == 0)
 	{
-		value *= nb;
-		power--;
+		return (0);
+	}
+	else if (index == 1)
+	{
+		return (1);
+	}
+	else if (index > 0)
+	{
+		value = ft_fibonacci(index - 1) + ft_fibonacci(index -2);
+		return (value);
+	}
+	else
+	{
+		return (-1);
 	}
 	return (value);
 }
