@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 22:13:55 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/20 22:48:06 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/20 22:57:33 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/20 23:29:09 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int ac, char **av )
+int	main(int argc, char **argv)
 {
+	int	count;
 	int	i;
-	int	j;
 
+	count = argc - 1;
 	i = 0;
-	j = 1;
-	while (j < ac)
-	{	
-		i = 0;
-		while (av[j][i] != '\0')
+	if (argc > 1)
+	{
+		while (count > 0)
 		{
-			write(1, &av[j][i], 1);
-			i++;
+			i = 0;
+			while (argv[count][i] != '\0')
+			{
+				write(1, &argv[count][i], 1);
+				i++;
+			}
+			write(1, "\n", 1);
+			count--;
 		}
-		write(1, "\n", 1);
-		j++;
 	}
 	return (0);
 }
