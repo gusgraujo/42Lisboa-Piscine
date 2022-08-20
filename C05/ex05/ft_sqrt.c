@@ -6,26 +6,25 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 23:11:22 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/18 23:36:21 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/20 20:38:19 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int num;
+	int	num;
 
 	num = 1;
 	if (nb > 0)
 	{
-		while (n * n <= nb)
+		while (num * num <= nb)
 		{
-			if ()
-			{
-				/* code */
-			}
-			
+			if (num * num == nb)
+				return (num);
+			else if (num >= 46341)
+				return (0);
+			num++;
 		}
-		
 	}
-	
+	return (0);
 }

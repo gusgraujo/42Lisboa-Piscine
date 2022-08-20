@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 21:26:59 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/20 21:07:47 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/20 20:50:02 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/20 21:00:11 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_power(int nb, int power)
+int	ft_is_prime(int nb)
 {
-	int	value;
+	int	num;
 
-	value = nb;
-	if (value > value * nb)
+	num = 2;
+	if (nb < 2)
 		return (0);
-	else if (power == 0)
-		return (1);
-	else if (power < 0)
-		return (0);
-	else if (power > 1)
-		return (value * ft_recursive_power(value, power - 1));
-	else
-		return (value);
+	while (num <= nb / 2)
+	{
+		if (nb % num == 0)
+			return (0);
+		num++;
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	while (nb < 2147483647 && !ft_is_prime(nb))
+	{
+		nb++;
+	}
+	return (nb);
 }
