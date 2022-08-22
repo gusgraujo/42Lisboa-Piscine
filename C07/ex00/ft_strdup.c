@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 22:01:52 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/22 17:51:15 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/22 16:48:45 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/22 17:47:34 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(int argc, char **argv )
+int	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
+char	*ft_strdup(char	*src)
 {
 	int	i;
+	int	size;
+	char *mystring;
 
-	i = 0;
-	if (argc >= 1)
+	size = ft_strlen(src);
+	mystring = (char *)malloc(sizeof(char) * (size + 1))
+	while (mystring[i] != NULL)
 	{
-		while (argv[0][i] != '\0')
-		{
-			write(1, &argv[0][i], 1);
-			i++;
-		}
-		write(1, "\n", 1);
-		return (0);
+		
 	}
+	
 }
