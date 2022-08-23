@@ -1,48 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 16:48:45 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/23 23:05:33 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/23 23:10:30 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/23 23:54:41 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int	*ft_range(int min, int max)
 {
-	int	count;
+	int	i;
+	int	*res;
+	int	index;
 
-	count = 0;
-	while (str[count] != '\0')
+	index = min;
+	i = 0;
+	res = malloc(max - min);
+	if (min >= max)
+		return (0);
+	if (res == NULL)
+		return (0);
+	while (index < max)
 	{
-		count++;
+		res[i] = index;
+		index ++;
+		i++;
 	}
-	return (count);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int c;
-
-	c = 0;
-	while (src[c] != '\0')
-	{
-		dest[c] = src[c];
-		c++;
-	}
-	dest[c] = '\0';
-	return (dest);
-}
-
-char	*ft_strdup(char *src)
-{
-	char		*dest;
-
-	dest = malloc((ft_strlen(src) + 1) * sizeof(char));
-	dest = ft_strcpy(dest, src);
-	return (dest);
+	return (res);
 }
