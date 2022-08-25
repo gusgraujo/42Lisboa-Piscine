@@ -6,7 +6,7 @@
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 16:48:45 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/23 23:05:33 by gugoncal         ###   ########.fr       */
+/*   Updated: 2022/08/24 21:11:29 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strlen(char *str)
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int c;
+	int	c;
 
 	c = 0;
 	while (src[c] != '\0')

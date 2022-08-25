@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gugoncal <gugoncal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 23:10:30 by gugoncal          #+#    #+#             */
-/*   Updated: 2022/08/25 15:07:30 by gugoncal         ###   ########.fr       */
+/*   Created: 2022/08/24 16:15:03 by gugoncal          #+#    #+#             */
+/*   Updated: 2022/08/24 18:59:54 by gugoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	*ft_range(int min, int max)
 
 	index = min;
 	i = 0;
-	res = malloc(sizeof(int) * (max - min));
+	res = malloc(max - min);
 	if (min >= max)
 		return (0);
-	if (!res)
-		return (NULL);
+	if (res == NULL)
+		return (0);
 	while (index < max)
 	{
 		res[i] = index;
@@ -32,4 +32,12 @@ int	*ft_range(int min, int max)
 		i++;
 	}
 	return (res);
+}
+
+int	ft_ultimate_range(int **range, int min, int max)
+{
+	*range = ft_range(min, max);
+	if (*range == NULL)
+		return (0);
+	return (max - min);
 }
